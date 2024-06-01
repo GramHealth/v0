@@ -1,5 +1,7 @@
 :root {
   --count_font_multiplier: .75;
+  --dimen_hero_section_height: auto;
+  --dimen_hero_cta_padding: 2rem;
   --dimen_partner_card_width: clamp(80px, 33svw, 144px);
   --dimen_hero_img_height: 340px;
   --dimen_counter_width: clamp(5rem, 25svw, 7rem);
@@ -15,6 +17,8 @@
 @media screen and (width> 768px) {
   :root {
     --count_font_multiplier: .5;
+    --dimen_hero_section_height: 50svh;
+    --dimen_hero_cta_padding: 4rem;
     --dimen_partner_card_width: 144px;
     --dimen_hero_img_height: inherit;
     --dimen_cta_card_margin: 2rem 0 4rem;
@@ -31,9 +35,10 @@
   padding: 0;
   /* background: linear-gradient(180deg, #0058E8 0%, #33BBFF 100%); */
   background: var(--grad_blue);
+  max-height: var(--dimen_hero_section_height);
 
   .hero_cta_container {
-    padding: 2rem;
+    padding: var(--dimen_hero_cta_padding);
     font-weight: 600;
     min-width: 50svw;
     display: flex;
@@ -87,7 +92,7 @@
 
   .areas_active {
     font-size: var(--dimen_font_title);
-    min-width: 40svw;
+    min-width: clamp(300px, 40svw, 600px);
     color: var(--col_fore_main, #FAFAFA);
   }
 
@@ -103,15 +108,17 @@
   text-align: center;
   text-wrap: balance;
   background-color: #333333;
+  border-radius: 1rem;
 
   .stat_main {
     font-size: var(--dimen_font_stat);
     color: #FAFAFA;
+    margin-bottom: 1rem;
   }
 
   .stat_sub {
-    font-size: calc(var(--dimen_font_stat) * var(--count_font_multiplier));
-    font-weight: 600;
+    font-size: calc(var(--dimen_font_title) * var(--count_font_multiplier));
+    font-weight: 500;
     color: var(--col_fore_sub, #83878C);
   }
 
@@ -165,7 +172,8 @@
         place-content: center;
 
         .partner_img {
-          height: calc(var(--dimen_partner_card_width, 80px) - 2rem);
+          margin-top: .75rem;
+          height: calc(var(--dimen_partner_card_width, 80px) - 2.5rem);
           width: auto;
         }
       }
@@ -180,9 +188,11 @@
 }
 
 .howitworks_container {
+  padding-block: 3rem;
+  margin: 2rem 0 5rem;
   text-align: center;
   background-color: #333333;
-  padding-block: 4rem;
+  border-radius: 1rem;
 
   .hiw_title {
     font-size: var(--dimen_font_title);
