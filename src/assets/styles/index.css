@@ -33,6 +33,12 @@
   --para_text_align: center;
 
   --font_size: 16px;
+
+  --dimen_font_title: 1.5rem;
+  --dimen_font_title_hero: 2rem;
+  --dimen_font_stat: 1.5rem;
+
+  --margin_resp_socials: auto;
 }
 
 
@@ -43,6 +49,12 @@
     --flex_dir_c2rr: row-reverse;
     --para_text_align: start;
     --font_size: 20px;
+
+    --dimen_font_title: 3rem;
+    --dimen_font_title_hero: 3rem;
+    --dimen_font_stat: 2rem;
+
+    --margin_resp_socials: 2rem;
   }
 }
 

@@ -18,6 +18,7 @@
   .hero_cta_container {
     padding: 2rem;
     font-weight: 600;
+    min-width: 50svw;
   }
 
   .logo_container {
@@ -32,11 +33,11 @@
 
   .cta_copy {
     margin-bottom: 1.5rem;
+    text-wrap: balance;
   }
 
   .hero_title {
-    text-wrap: balance;
-    font-size: 2rem;
+    font-size: var(--dimen_font_title_hero);
     margin-bottom: 1rem;
   }
 
@@ -56,14 +57,15 @@
   padding: 2rem;
   text-align: center;
   align-items: center;
+  gap: 1rem;
 
-  * {
+  /* * {
     margin-bottom: 1rem;
-  }
+  } */
 
   .areas_active {
-    font-size: 1.5rem;
-
+    font-size: var(--dimen_font_title);
+    min-width: 40svw;
     color: var(--col_fore_main, #FAFAFA);
   }
 
@@ -81,7 +83,7 @@
   background-color: #333333;
 
   .stat_main {
-    font-size: 1.5rem;
+    font-size: var(--dimen_font_stat);
     color: #FAFAFA;
   }
 
@@ -98,11 +100,19 @@
   margin-bottom: 2rem;
   text-align: center;
   text-wrap: balance;
+  gap: 2rem;
+
+  .partner_title_container {
+    display: block;
+  }
+
+  .partner_icon {
+    width: 2rem;
+    margin-inline-end: auto;
+  }
 
   .partner_title {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-
+    font-size: var(--dimen_font_title);
   }
 
   .partner_list {
@@ -148,9 +158,10 @@
 
 .howitworks_container {
   text-align: center;
+  background-color: #333333;
 
   .hiw_title {
-    font-size: 2rem;
+    font-size: var(--dimen_font_title);
   }
 
   .hiw_list {
@@ -165,11 +176,11 @@
     align-items: center;
 
     .hiw_step_count_container {
-      width: 7rem;
-      height: 7rem;
+      width: 25svw;
+      height: 25svw;
       border: solid 1px var(--col_fore_sub, #83878C);
 
-      padding: 2rem;
+      padding: 1.5rem;
       border-radius: 100%;
       place-items: center;
 
@@ -207,6 +218,7 @@
   padding: 24px;
   border-radius: 16px;
   border: 1px solid rgba(255, 255, 255, 0.7);
+  gap: 2rem;
 
 
   .img_card_cta {
@@ -215,16 +227,26 @@
   }
 
   .cta_card_info {
-    text-align: center;
+    text-align: var(--para_text_align);
     margin-block: 24px;
+    min-width: 40svw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
+    .cta_card_main {
+      font-size: var(--dimen_font_title);
+      font-weight: 800;
+    }
+
+    .cta_card_msg {
+      font-size: 1.25rem;
+    }
+
+    .lnk_btn_order {
+      margin-inline: var(--margin_resp_socials);
+    }
   }
 
-  .cta_card_main {
-    font-size: 24px;
-    font-weight: 800;
-  }
-
-  .cta_card_msg {
-    font-size: 20px;
-  }
 }

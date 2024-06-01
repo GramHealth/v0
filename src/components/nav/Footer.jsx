@@ -8,7 +8,7 @@ import ic_linked from '../../assets/icons/ic_linked.svg';
 export default function Footer() {
 	return (
 		<footer className='foot_container'>
-			<div className='flex mission_container'>
+			<div className='mission_container flex_res'>
 				<section className='mission'>
 					<h2 className='head mission_main'>Medicine for Life - </h2>
 					<h3 className='head mission_sub'>
@@ -21,14 +21,14 @@ export default function Footer() {
 					</p>
 				</section>
 				<section className='socials'>
-					<p className='cta_social'>Connect with Us</p>
+					<p className='cta_social'>Connect with us</p>
 					<div className='flex social_list'>
-						<a
+						{/* <a
 							className=''
 							href='https://www.instagram.com/gramhealth.in?igsh=NWNodGU5MHFkcjlj'
 						>
 							<ImgIcon src={ic_insta} />
-						</a>
+						</a> */}
 						<a
 							className=''
 							href='https://www.instagram.com/gramhealth.in?igsh=NWNodGU5MHFkcjlj'

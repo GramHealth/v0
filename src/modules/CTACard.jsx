@@ -13,7 +13,7 @@ export default function CTACard() {
 				alt='accepting orders on whatsapp'
 				className='img_card_cta'
 			/>
-			<div className='cta_card_info'>
+			<div className='cta_card_info test_resp'>
 				<h2 className='cta_card_main'>Now Accepting</h2>
 				<p className='cta_card_msg'>
 					Cash on Delivery & Monthly Subscriptions

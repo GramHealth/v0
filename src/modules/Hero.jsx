@@ -25,7 +25,7 @@ export default function Hero() {
 
 				<div className='cta_copy'>
 					<h2 className='hero_title'>
-						Order medicine and get it delivered within 30 minutes{' '}
+						Order medicine & get it delivered within 30 minutes{' '}
 						<ImgIcon src={ic_bolt} />
 					</h2>
 					<p className='hero_sub'>
