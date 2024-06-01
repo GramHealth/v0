@@ -2,6 +2,7 @@
   --count_font_multiplier: .75;
   --dimen_hero_section_height: auto;
   --dimen_hero_cta_padding: 2rem;
+  --dimen_hero_img_width: 100%;
   --dimen_partner_card_width: clamp(80px, 33svw, 144px);
   --dimen_hero_img_height: 340px;
   --dimen_counter_width: clamp(5rem, 25svw, 7rem);
@@ -17,10 +18,11 @@
 @media screen and (width> 768px) {
   :root {
     --count_font_multiplier: .5;
-    --dimen_hero_section_height: 50svh;
+    --dimen_hero_section_height: 48svh;
     --dimen_hero_cta_padding: 4rem;
-    --dimen_partner_card_width: 144px;
+    --dimen_hero_img_width: 50svw;
     --dimen_hero_img_height: inherit;
+    --dimen_partner_card_width: 144px;
     --dimen_cta_card_margin: 2rem 0 4rem;
     --dimen_counter_lh: 1em;
     --dimen_hiw_list_pad: 2rem;
@@ -40,7 +42,7 @@
   .hero_cta_container {
     padding: var(--dimen_hero_cta_padding);
     font-weight: 600;
-    min-width: 50svw;
+    min-width: 48svw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -73,6 +75,7 @@
   }
 
   .hero_img {
+    width: var(--dimen_hero_img_width);
     height: var(--dimen_hero_img_height);
     /* width: 100%; */
     object-fit: cover;
