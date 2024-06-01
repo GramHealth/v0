@@ -4,6 +4,7 @@ import ImgIcon from '../img/ImgIcon';
 
 import ic_insta from '../../assets/icons/ic_insta.svg';
 import ic_linked from '../../assets/icons/ic_linked.svg';
+import { instagram_link, linkedin_link } from '../../utils/constants';
 
 export default function Footer() {
 	return (
@@ -31,13 +32,13 @@ export default function Footer() {
 						</a> */}
 						<a
 							className=''
-							href='https://www.instagram.com/gramhealth.in?igsh=NWNodGU5MHFkcjlj'
+							href={instagram_link}
 						>
 							<ImgIcon src={ic_insta} />
 						</a>
 						<a
 							className=''
-							href='https://www.linkedin.com/company/gramhealth/'
+							href={linkedin_link}
 						>
 							<ImgIcon src={ic_linked} />
 						</a>
