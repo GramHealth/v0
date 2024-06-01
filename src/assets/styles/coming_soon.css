@@ -1,0 +1,230 @@
+:root {
+  --dimen_partner_card_width: clamp(80px, 33svw, 144px);
+  --dimen_hero_img_height: 340px;
+}
+
+@media screen and (width> 768px) {
+  :root {
+    --dimen_partner_card_width: 144px;
+    --dimen_hero_img_height: inherit;
+  }
+}
+
+.hero_back {
+  padding: 0;
+  /* background: linear-gradient(180deg, #0058E8 0%, #33BBFF 100%); */
+  background: var(--grad_blue);
+
+  .hero_cta_container {
+    padding: 2rem;
+    font-weight: 600;
+  }
+
+  .logo_container {
+    margin-bottom: 1.5rem;
+
+    .logo_gh {
+      width: 160px;
+      object-fit: contain;
+    }
+  }
+
+
+  .cta_copy {
+    margin-bottom: 1.5rem;
+  }
+
+  .hero_title {
+    text-wrap: balance;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero_sub {
+    font-size: 1rem;
+    text-wrap: pretty;
+  }
+
+  .hero_img {
+    height: var(--dimen_hero_img_height);
+    /* width: 100%; */
+    object-fit: cover;
+  }
+}
+
+.areas_container {
+  padding: 2rem;
+  text-align: center;
+  align-items: center;
+
+  * {
+    margin-bottom: 1rem;
+  }
+
+  .areas_active {
+    font-size: 1.5rem;
+
+    color: var(--col_fore_main, #FAFAFA);
+  }
+
+  .areas_list {
+    font-size: 1rem;
+    color: var(--col_fore_sub, #83878C);
+  }
+}
+
+.stat_container {
+  margin-block: 1rem;
+  padding-block: 3rem;
+  text-align: center;
+  text-wrap: balance;
+  background-color: #333333;
+
+  .stat_main {
+    font-size: 1.5rem;
+    color: #FAFAFA;
+  }
+
+  .stat_sub {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--col_fore_sub, #83878C);
+  }
+
+}
+
+.partner_container {
+  align-items: center;
+  margin-bottom: 2rem;
+  text-align: center;
+  text-wrap: balance;
+
+  .partner_title {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+
+  }
+
+  .partner_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: self-start;
+    gap: 3rem;
+    padding: 1rem;
+
+    .partner_item {
+      /* min-width: var(--dimen_partner_card_width, 80px); */
+      width: var(--dimen_partner_card_width, 80px);
+      /* max-width: calc(var(--dimen_partner_card_width, 80px) * 1.25); */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: .5rem;
+
+
+      .partner_img_container {
+        width: var(--dimen_partner_card_width, 80px);
+        height: var(--dimen_partner_card_width, 80px);
+        border-radius: 100%;
+        background: var(--grad_bleu);
+        place-content: center;
+
+        .partner_img {
+          height: calc(var(--dimen_partner_card_width, 80px) - 2rem);
+          width: auto;
+        }
+      }
+
+      .partner_label {
+        font-size: 1rem;
+        font-weight: 400;
+        color: var(--col_fore_sub, #83878C);
+      }
+    }
+  }
+}
+
+.howitworks_container {
+  text-align: center;
+
+  .hiw_title {
+    font-size: 2rem;
+  }
+
+  .hiw_list {
+    margin-block: 2.5rem;
+    gap: 2.5rem;
+  }
+
+  .hiw_item {
+
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+
+    .hiw_step_count_container {
+      width: 7rem;
+      height: 7rem;
+      border: solid 1px var(--col_fore_sub, #83878C);
+
+      padding: 2rem;
+      border-radius: 100%;
+      place-items: center;
+
+      .hiw_step_count {
+        font-size: 4rem;
+        line-height: .75em;
+      }
+    }
+
+    .hiw_rhs {
+      flex-grow: 1;
+    }
+
+    .hiw_img {
+      /* width: 180px; */
+      height: 160px;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 16px;
+    }
+
+    .hiw_label {
+      color: var(--col_fore_sub, #83878C);
+      text-align: start;
+      /* margin-inline-start: 1.5rem; */
+    }
+  }
+}
+
+
+
+
+.cta_card_container {
+  margin: 2rem 1rem 4rem;
+  padding: 24px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+
+
+  .img_card_cta {
+    border-radius: 24px;
+    max-height: 320px;
+  }
+
+  .cta_card_info {
+    text-align: center;
+    margin-block: 24px;
+  }
+
+  .cta_card_main {
+    font-size: 24px;
+    font-weight: 800;
+  }
+
+  .cta_card_msg {
+    font-size: 20px;
+  }
+}
