@@ -1,11 +1,6 @@
 .app_container {
-
   min-height: 70svh;
   background-color: var(--col_body);
-
-  >* {
-    padding: 1rem;
-  }
 }
 
 .logo {

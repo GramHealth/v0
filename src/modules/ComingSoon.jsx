@@ -11,11 +11,13 @@ export default function ComingSoon() {
 	return (
 		<div className='app_container'>
 			<Hero />
-			<ActiveAreas />
-			<Mission />
-			<Partnerships />
-			<HowItWorks />
-			<CTACard />
+			<div className='width_container'>
+				<ActiveAreas />
+				<Mission />
+				<Partnerships />
+				<HowItWorks />
+				<CTACard />
+			</div>
 		</div>
 	);
 }

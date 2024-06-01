@@ -1,12 +1,29 @@
 :root {
+  --count_font_multiplier: .75;
   --dimen_partner_card_width: clamp(80px, 33svw, 144px);
   --dimen_hero_img_height: 340px;
+  --dimen_counter_width: clamp(5rem, 25svw, 7rem);
+  --dimen_counter_lh: .75em;
+  --dimen_hiw_list_pad: 0;
+  --dimen_cta_card_margin: 2rem 1rem 4rem;
+
+  --cta_card_padding: 24px;
+  --cta_card_border: 1px solid rgba(255, 255, 255, 0.7);
+  --cta_card_borde_rad: 16px;
 }
 
 @media screen and (width> 768px) {
   :root {
+    --count_font_multiplier: .5;
     --dimen_partner_card_width: 144px;
     --dimen_hero_img_height: inherit;
+    --dimen_cta_card_margin: 2rem 0 4rem;
+    --dimen_counter_lh: 1em;
+    --dimen_hiw_list_pad: 2rem;
+
+    --cta_card_padding: 0;
+    --cta_card_border: unset;
+    --cta_card_borde_rad: 0;
   }
 }
 
@@ -19,6 +36,9 @@
     padding: 2rem;
     font-weight: 600;
     min-width: 50svw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .logo_container {
@@ -42,7 +62,8 @@
   }
 
   .hero_sub {
-    font-size: 1rem;
+    font-size: calc(var(--dimen_font_title_hero) * var(--count_font_multiplier));
+    font-weight: 400;
     text-wrap: pretty;
   }
 
@@ -55,6 +76,7 @@
 
 .areas_container {
   padding: 2rem;
+  padding-block: 4rem;
   text-align: center;
   align-items: center;
   gap: 1rem;
@@ -70,14 +92,14 @@
   }
 
   .areas_list {
-    font-size: 1rem;
+    font-size: calc(var(--dimen_font_title) * var(--count_font_multiplier));
     color: var(--col_fore_sub, #83878C);
   }
 }
 
 .stat_container {
   margin-block: 1rem;
-  padding-block: 3rem;
+  padding-block: 4rem;
   text-align: center;
   text-wrap: balance;
   background-color: #333333;
@@ -88,7 +110,7 @@
   }
 
   .stat_sub {
-    font-size: 1rem;
+    font-size: calc(var(--dimen_font_stat) * var(--count_font_multiplier));
     font-weight: 600;
     color: var(--col_fore_sub, #83878C);
   }
@@ -96,6 +118,7 @@
 }
 
 .partner_container {
+  padding-block: 4rem;
   align-items: center;
   margin-bottom: 2rem;
   text-align: center;
@@ -148,7 +171,7 @@
       }
 
       .partner_label {
-        font-size: 1rem;
+        font-size: calc(var(--dimen_font_title) * var(--count_font_multiplier));
         font-weight: 400;
         color: var(--col_fore_sub, #83878C);
       }
@@ -159,6 +182,7 @@
 .howitworks_container {
   text-align: center;
   background-color: #333333;
+  padding-block: 4rem;
 
   .hiw_title {
     font-size: var(--dimen_font_title);
@@ -167,6 +191,8 @@
   .hiw_list {
     margin-block: 2.5rem;
     gap: 2.5rem;
+    padding-inline: var(--dimen_hiw_list_pad);
+    justify-content: space-between;
   }
 
   .hiw_item {
@@ -174,10 +200,11 @@
     display: flex;
     gap: 2rem;
     align-items: center;
+    justify-content: center;
 
     .hiw_step_count_container {
-      width: 25svw;
-      height: 25svw;
+      width: var(--dimen_counter_width);
+      height: var(--dimen_counter_width);
       border: solid 1px var(--col_fore_sub, #83878C);
 
       padding: 1.5rem;
@@ -186,12 +213,13 @@
 
       .hiw_step_count {
         font-size: 4rem;
-        line-height: .75em;
+        line-height: var(--dimen_counter_lh);
       }
     }
 
     .hiw_rhs {
       flex-grow: 1;
+      max-width: 50svw;
     }
 
     .hiw_img {
@@ -214,22 +242,24 @@
 
 
 .cta_card_container {
-  margin: 2rem 1rem 4rem;
-  padding: 24px;
-  border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.7);
+  margin: var(--dimen_cta_card_margin, 2rem 1rem 4rem);
+  padding: var(--cta_card_padding, 24px);
+  border-radius: var(--cta_card_borde_rad);
+  border: var(--cta_card_border);
   gap: 2rem;
 
+  container-name: cta-card-container;
 
   .img_card_cta {
     border-radius: 24px;
     max-height: 320px;
+    min-width: clamp(200px, 40svw, 600px);
   }
 
   .cta_card_info {
     text-align: var(--para_text_align);
     margin-block: 24px;
-    min-width: 40svw;
+    min-width: clamp(200px, 40svw, 600px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -241,11 +271,13 @@
     }
 
     .cta_card_msg {
-      font-size: 1.25rem;
+      font-size: calc(var(--dimen_font_title) * var(--count_font_multiplier));
+      /* font-size: 1.25rem; */
     }
 
     .lnk_btn_order {
-      margin-inline: var(--margin_resp_socials);
+      margin-inline: var(--margin_resp_cta);
+      min-width: 248px;
     }
   }
 
