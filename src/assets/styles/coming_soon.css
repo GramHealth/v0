@@ -18,7 +18,7 @@
 @media screen and (width> 768px) {
   :root {
     --count_font_multiplier: .5;
-    --dimen_hero_section_height: 48svh;
+    --dimen_hero_section_height: clamp(560px, 48svh, 700px);
     --dimen_hero_cta_padding: 4rem;
     --dimen_hero_img_width: 50svw;
     --dimen_hero_img_height: inherit;

@@ -99,10 +99,13 @@
 
 .lnk_btn_order {
   margin-block: 1rem;
-  min-width: 296px;
+  min-width: 252px;
   max-width: 360px;
+  max-height: 60px;
+
   display: flex;
   flex-direction: row;
+  flex-grow: 1;
   justify-content: center;
   align-items: center;
   padding: 12px 24px;
