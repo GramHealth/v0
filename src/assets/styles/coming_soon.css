@@ -6,6 +6,7 @@
   --dimen_partner_card_width: clamp(80px, 33svw, 144px);
   --dimen_hero_img_height: 340px;
   --dimen_counter_width: clamp(5rem, 25svw, 7rem);
+  --dimen_font_counter: 2.5rem;
   --dimen_counter_lh: .75em;
   --dimen_hiw_list_pad: 0;
   --dimen_cta_card_margin: 2rem 1rem 4rem;
@@ -13,6 +14,24 @@
   --cta_card_padding: 24px;
   --cta_card_border: 1px solid rgba(255, 255, 255, 0.7);
   --cta_card_borde_rad: 16px;
+
+  --dimen_section_padding_inline: 1rem;
+  --dimen_areas_active_min_width: clamp(240px, 44svw, 600px);
+
+}
+
+@media screen and (width> 359px) {
+  :root {
+    --dimen_font_counter: 3rem;
+    --dimen_counter_lh: .85em;
+  }
+}
+
+@media screen and (width> 399px) {
+  :root {
+    --dimen_font_counter: 4rem;
+    --dimen_counter_lh: .95em;
+  }
 }
 
 @media screen and (width> 768px) {
@@ -24,13 +43,21 @@
     --dimen_hero_img_height: inherit;
     --dimen_partner_card_width: 144px;
     --dimen_cta_card_margin: 2rem 0 4rem;
+    --dimen_font_counter: 4rem;
     --dimen_counter_lh: 1em;
     --dimen_hiw_list_pad: 2rem;
 
-    --cta_card_padding: 0;
+    --cta_card_padding: 0 2rem;
     --cta_card_border: unset;
     --cta_card_borde_rad: 0;
+    --dimen_section_padding_inline: 2rem;
+    --dimen_areas_active_min_width: clamp(300px, 40svw, 600px);
+
   }
+}
+
+.alter_sections_container {
+  padding-inline: var(--dimen_section_padding_inline);
 }
 
 .hero_back {
@@ -82,12 +109,16 @@
   }
 }
 
+
+
 .areas_container {
   padding: 2rem;
   padding-block: 4rem;
   text-align: center;
   align-items: center;
   gap: 1rem;
+  text-wrap: balance;
+  text-wrap: pretty;
 
   /* * {
     margin-bottom: 1rem;
@@ -95,13 +126,14 @@
 
   .areas_active {
     font-size: var(--dimen_font_title);
-    min-width: clamp(300px, 40svw, 600px);
+    min-width: var(--dimen_areas_active_min_width);
     color: var(--col_fore_main, #FAFAFA);
   }
 
   .areas_list {
     font-size: calc(var(--dimen_font_title) * var(--count_font_multiplier));
     color: var(--col_fore_sub, #83878C);
+
   }
 }
 
@@ -225,14 +257,14 @@
       place-items: center;
 
       .hiw_step_count {
-        font-size: 4rem;
+        font-size: var(--dimen_font_counter);
         line-height: var(--dimen_counter_lh);
       }
     }
 
     .hiw_rhs {
       flex-grow: 1;
-      max-width: 50svw;
+      max-width: 60svw;
     }
 
     .hiw_img {

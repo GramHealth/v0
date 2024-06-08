@@ -1,6 +1,6 @@
 export default function ActiveAreas() {
 	return (
-		<div className='areas_container flex_res'>
+		<div className='alter_sections_container areas_container flex_res'>
 			<p className='areas_active test_resp'>
 				Currently Delivering to the Neighborhoods of Kolkata
 			</p>

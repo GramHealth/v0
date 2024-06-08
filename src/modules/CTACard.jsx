@@ -8,7 +8,7 @@ const img_cta = `https://images.unsplash.com/photo-1584515933487-779824d29309?q=
 
 export default function CTACard() {
 	return (
-		<div className='flex_reverse cta_card_container'>
+		<div className='alter_sections_container flex_reverse cta_card_container'>
 			<Img
 				src={img_cta}
 				alt='accepting orders on whatsapp'

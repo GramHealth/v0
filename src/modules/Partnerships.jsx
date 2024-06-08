@@ -35,7 +35,7 @@ const list_partner_feats = [
 
 export default function Partnerships() {
 	return (
-		<div className='partner_container flex_res'>
+		<div className='alter_sections_container partner_container flex_res'>
 			<div className='partner_title_container'>
 				{/* <ImgIcon
 					src={ic_arrow_diag}
