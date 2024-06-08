@@ -140,6 +140,7 @@
 .stat_container {
   margin-block: 1rem;
   padding-block: 4rem;
+  padding-inline: 2rem;
   text-align: center;
   text-wrap: balance;
   background-color: #333333;

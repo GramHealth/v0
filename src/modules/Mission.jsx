@@ -1,6 +1,6 @@
 export default function Mission() {
 	return (
-		<div className='stat_container'>
+		<div className='alter_sections_container stat_container'>
 			<p className='stat_main'>
 				15 lakh lives could be saved every year in India by simply
 				delivering medicines on time
