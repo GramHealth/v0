@@ -30,7 +30,7 @@ export default function Hero() {
 
 				<div className='cta_copy'>
 					<h2 className='hero_title'>
-						Order medicine & get it delivered within 30 minutes{' '}
+						Order medicines & get them delivered ASAP{' '}
 						<ImgIcon src={ic_bolt} />
 					</h2>
 					<p className='hero_sub'>
