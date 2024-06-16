@@ -6,6 +6,7 @@ import Mission from './Mission';
 import Partnerships from './Partnerships';
 import HowItWorks from './HowItWorks';
 import CTACard from './CTACard';
+import ExpressDelivery from './ExpressDelivery';
 
 export default function ComingSoon() {
 	return (
@@ -17,6 +18,7 @@ export default function ComingSoon() {
 				<Partnerships />
 				<HowItWorks />
 				<CTACard />
+				<ExpressDelivery />
 			</div>
 		</div>
 	);

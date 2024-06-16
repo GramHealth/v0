@@ -9,11 +9,27 @@
   --dimen_font_counter: 2.5rem;
   --dimen_counter_lh: .75em;
   --dimen_hiw_list_pad: 0;
-  --dimen_cta_card_margin: 2rem 1rem 4rem;
 
-  --cta_card_padding: 24px;
+  --dimen_card_cta_gap: 0;
+
+  --dimen_cta_card_margin: 2rem 1rem 4rem;
+  --dimen_cta_card_padding: 24px;
   --cta_card_border: 1px solid rgba(255, 255, 255, 0.7);
-  --cta_card_borde_rad: 16px;
+  --cta_card_border_rad: 16px;
+  --cta_card_back: transparent;
+  --dimen_cta_card_img_height: 360px;
+  --dimen_cta_card_img_width: clamp(200px, 40svw, 600px);
+
+  --dimen_express_card_margin: 2rem 1rem 4rem;
+  --dimen_express_card_padding: 24px;
+  --express_title_justify: center;
+  --express_card_border: 2px dashed hsl(200, 90%, 48%);
+  --dimen_express_card_img_height: 360px;
+  --dimen_express_card_img_width: clamp(200px, 40svw, 600px);
+  --dimen_express_card_img_width_max: 100%;
+  --dimen_express_icon_width: 44px;
+  --express_card_border_rad: 24px;
+  --express_card_img_border_rad: 16px;
 
   --dimen_section_padding_inline: 1rem;
   --dimen_areas_active_min_width: clamp(240px, 44svw, 600px);
@@ -42,14 +58,31 @@
     --dimen_hero_img_width: 50svw;
     --dimen_hero_img_height: inherit;
     --dimen_partner_card_width: 144px;
-    --dimen_cta_card_margin: 2rem 0 4rem;
+
     --dimen_font_counter: 4rem;
     --dimen_counter_lh: 1em;
     --dimen_hiw_list_pad: 2rem;
 
-    --cta_card_padding: 0 2rem;
-    --cta_card_border: unset;
-    --cta_card_borde_rad: 0;
+    --dimen_card_cta_gap: 2rem;
+
+    --dimen_cta_card_margin: 2rem 0 4rem;
+    --dimen_cta_card_padding: 60px;
+    --cta_card_border: 0;
+    --cta_card_border_rad: 1rem;
+    --cta_card_back: linear-gradient(75deg,
+        hsl(217, 96%, 50%) 30%,
+        hsl(200, 90%, 48%) 100%);
+    --dimen_cta_card_img_height: 320px;
+    --dimen_cta_card_img_width: clamp(200px, 30svw, 540px);
+
+    --dimen_express_card_margin: 2rem 0 4rem;
+    --dimen_express_card_padding: 2rem;
+    --express_title_justify: start;
+    --dimen_express_card_img_height: 320px;
+    --dimen_express_card_img_width: clamp(200px, 30svw, 540px);
+    --dimen_express_card_img_width_max: 50svw;
+    --dimen_express_icon_width: 88px;
+
     --dimen_section_padding_inline: 2rem;
     --dimen_areas_active_min_width: clamp(300px, 40svw, 600px);
 
@@ -80,6 +113,7 @@
 
     .logo_gh {
       width: 160px;
+      height: auto;
       object-fit: contain;
     }
   }
@@ -260,6 +294,7 @@
       .hiw_step_count {
         font-size: var(--dimen_font_counter);
         line-height: var(--dimen_counter_lh);
+        font-weight: 700;
       }
     }
 
@@ -279,6 +314,7 @@
     .hiw_label {
       color: var(--col_fore_sub, #83878C);
       text-align: start;
+      text-wrap: pretty;
       /* margin-inline-start: 1.5rem; */
     }
   }
@@ -289,17 +325,19 @@
 
 .cta_card_container {
   margin: var(--dimen_cta_card_margin, 2rem 1rem 4rem);
-  padding: var(--cta_card_padding, 24px);
-  border-radius: var(--cta_card_borde_rad);
+  padding: var(--dimen_cta_card_padding, 24px);
+  background: var(--cta_card_back);
+  border-radius: var(--cta_card_border_rad);
   border: var(--cta_card_border);
-  gap: 2rem;
+  gap: var(--dimen_card_cta_gap, 2rem);
 
   container-name: cta-card-container;
 
   .img_card_cta {
     border-radius: 24px;
-    max-height: 320px;
-    min-width: clamp(200px, 40svw, 600px);
+    max-height: var(--dimen_cta_card_img_height);
+    min-width: var(--dimen_cta_card_img_width);
+    aspect-ratio: 13/8;
   }
 
   .cta_card_info {
@@ -326,5 +364,56 @@
       min-width: 248px;
     }
   }
+
+}
+
+.express_container {
+  margin: var(--dimen_express_card_margin, 2rem 1rem 4rem);
+  padding: var(--dimen_express_card_padding, 24px);
+  border-radius: var(--express_card_border_rad);
+  border: var(--express_card_border);
+  gap: var(--dimen_card_cta_gap, 2rem);
+
+  container-name: cta-card-container;
+
+  .img_express {
+    max-height: var(--dimen_express_card_img_height);
+    min-width: var(--dimen_express_card_img_width);
+    max-width: var(--dimen_express_card_img_width_max);
+    border-radius: var(--express_card_img_border_rad, 24px);
+  }
+
+  .express_msg_container {
+    text-align: var(--para_text_align);
+    margin-block: 24px;
+    min-width: clamp(200px, 40svw, 540px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-wrap: balance;
+
+    .express_title {
+      display: flex;
+      gap: .5rem;
+      flex-wrap: wrap-reverse;
+      align-items: center;
+      place-content: var(--express_title_justify, center);
+
+      font-size: var(--dimen_font_title);
+      font-weight: 800;
+
+      .express_icon {
+        width: var(--dimen_express_icon_width);
+        height: auto;
+      }
+    }
+
+    .express_msg {
+      margin-block-start: .5rem;
+      font-size: calc(var(--dimen_font_title) * var(--count_font_multiplier));
+    }
+  }
+
+
 
 }

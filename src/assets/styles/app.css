@@ -41,8 +41,8 @@
 
 .foot_container {
   background: var(--grad_blu);
-  padding: 1rem;
-  padding-block: 3rem;
+  padding: var(--dimen_hero_cta_padding, 1rem);
+  /* padding-block: 3rem; */
 }
 
 .mission_container {
