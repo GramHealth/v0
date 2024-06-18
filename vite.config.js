@@ -10,6 +10,7 @@ import browserslist from 'browserslist';
 const dev = {
 	plugins: [react()],
 };
+
 let config = dev;
 if (process.env.NODE_ENV === 'production') {
 	const prod = {
@@ -31,20 +32,7 @@ if (process.env.NODE_ENV === 'production') {
 	};
 	config = prod;
 }
+
 const plugins = [MillionLint.vite()];
+
 export default defineConfig(config);
-
-// export default defineConfig({
-// 	plugins: [react()],
-
-// 	plugins: [million.vite({ auto: true }), react()],
-// 	css: {
-// 		transformer: 'lightningcss',
-// 		lightningcss: {
-// 			targets: browserslistToTargets(browserslist('>= 0.25%')),
-// 		},
-// 	},
-// 	build: {
-// 		cssMinify: 'lightningcss',
-// 	},
-// });
