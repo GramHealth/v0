@@ -5,7 +5,7 @@ const list_hiw = [
 	{
 		id: 1,
 		icon: img_hiw_1,
-		label: 'Order Online at your convenience',
+		label: 'Order online, at your convenience',
 	},
 
 	{
@@ -17,7 +17,7 @@ const list_hiw = [
 	{
 		id: 3,
 		icon: img_hiw_3,
-		label: 'Receive your order in 30 mins or less',
+		label: 'Receive your order ASAP, in minutes',
 	},
 ];
 export default function HowItWorks() {
